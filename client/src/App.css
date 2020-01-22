@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.search-form-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.search-form {
+  display: flex;
+  width: 70vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.card{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+

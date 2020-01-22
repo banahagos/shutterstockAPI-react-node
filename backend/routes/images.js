@@ -11,9 +11,14 @@ sstk.setBasicAuth(applicationConsumerId, applicationConsumerSecret);
 /* GET search results. */
 router.get('/', async (req, res, next) => {
   try {
-    const imagesApi = new sstk.ImagesApi();
-    const data = await imagesApi.searchImages({ query: req.query.searchTerm })
-    res.json(data.data);
+    if(req.query.searchTerm !== ''){
+      const imagesApi = new sstk.ImagesApi();
+      const data = await imagesApi.searchImages({ query: req.query.searchTerm })
+      res.json(data.data);
+    } else {
+      res.json([])
+    }
+    
   } catch (err) {
     res.json(err)
   }
